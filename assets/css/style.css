@@ -1,0 +1,182 @@
+@font-face {
+  font-family: 'DINPro-Regular';
+  src: url("../fonts/DINPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/DINPro-Regular.otf") format("opentype"), url("../fonts/DINPro-Regular.woff") format("woff"), url("../fonts/DINPro-Regular.ttf") format("truetype"), url("../fonts/DINPro-Regular.svg#DINPro-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+* {
+  outline: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'DINPro-Regular' !important; }
+
+.container {
+  max-width: 1362px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+header {
+  padding: 20px 0 63px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #444444; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 50px; }
+  .grid .item {
+    border: solid 0.2px rgba(68, 68, 68, 0.1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 19px 0 rgba(68, 68, 68, 0.1);
+    -moz-box-shadow: 0 0 19px 0 rgba(68, 68, 68, 0.1);
+    -ms-box-shadow: 0 0 19px 0 rgba(68, 68, 68, 0.1);
+    -o-box-shadow: 0 0 19px 0 rgba(68, 68, 68, 0.1);
+    box-shadow: 0 0 19px 0 rgba(68, 68, 68, 0.1); }
+  .grid .imgBox {
+    position: relative; }
+    .grid .imgBox img {
+      width: 100%;
+      display: block; }
+    .grid .imgBox .detail {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7); }
+    .grid .imgBox .tag {
+      background: #67a7ff;
+      min-width: 130px;
+      margin-top: -17px;
+      position: relative;
+      text-align: center;
+      color: #fff;
+      font-size: 15px;
+      line-height: 18px;
+      float: right;
+      padding: 8px; }
+      .grid .imgBox .tag:before {
+        content: '';
+        position: absolute;
+        text-align: center;
+        left: -22px;
+        top: 0;
+        border-left: 20px solid transparent;
+        border-top: 17px solid #67a7ff;
+        border-right: 7px solid #67a7ff;
+        border-bottom: 17px solid #67a7ff; }
+    .grid .imgBox .rating {
+      float: right;
+      clear: both;
+      text-align: center;
+      color: #ffffff;
+      padding: 7px 8px;
+      line-height: 18px;
+      background: #f5a626;
+      margin-top: 10px;
+      font-size: 13.5px;
+      margin-right: 15px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px; }
+      .grid .imgBox .rating span {
+        font-size: 18.5px; }
+    .grid .imgBox .tag-rating {
+      position: absolute;
+      bottom: 10px;
+      padding: 0 10px;
+      width: 100%; }
+      .grid .imgBox .tag-rating .tags {
+        float: left; }
+        .grid .imgBox .tag-rating .tags span {
+          background: #fff;
+          margin-right: 4px;
+          display: inline-block;
+          padding: 8px 17px;
+          font-size: 13.5px;
+          line-height: 18px;
+          color: #444444;
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -ms-border-radius: 20px;
+          -o-border-radius: 20px;
+          border-radius: 20px; }
+      .grid .imgBox .tag-rating .rank {
+        float: right;
+        color: #fff;
+        margin-top: 10px;
+        font-size: 13.5px;
+        line-height: 18px; }
+  .grid .collegeDetail {
+    padding: 10px 15px; }
+    .grid .collegeDetail h2 {
+      font-size: 18px;
+      line-height: 18px;
+      color: #444444;
+      float: left; }
+    .grid .collegeDetail .starRating {
+      float: left;
+      margin-left: 15px; }
+    .grid .collegeDetail .star {
+      margin-right: 2px;
+      position: relative;
+      display: inline-block;
+      color: #444444;
+      width: 0px;
+      height: 0px;
+      border-right: 9px solid transparent;
+      border-bottom: 9px solid #444444;
+      border-left: 0px solid transparent;
+      -webkit-transform: rotate(169deg);
+      -ms-transform: rotate(169deg);
+      -moz-transform: rotate(169deg);
+      -o-transform: rotate(169deg);
+      transform: rotate(169deg); }
+      .grid .collegeDetail .star:before {
+        content: '';
+        border-bottom: 6px solid #444444;
+        border-left: 4px solid transparent;
+        border-right: 3px solid transparent;
+        position: absolute;
+        height: 0;
+        width: 0;
+        top: 5px;
+        left: -2px;
+        display: block;
+        -webkit-transform: rotate(-52deg);
+        -ms-transform: rotate(-52deg);
+        -moz-transform: rotate(-52deg);
+        -o-transform: rotate(-52deg);
+        transform: rotate(-52deg); }
+      .grid .collegeDetail .star:after {
+        content: '';
+        position: absolute;
+        display: block;
+        color: #444444;
+        top: 4px;
+        left: -4px;
+        width: 0px;
+        height: 0px;
+        border-right: 8px solid transparent;
+        border-bottom: 5px solid #444444;
+        border-left: 6px solid transparent;
+        -webkit-transform: rotate(-202deg);
+        -ms-transform: rotate(-202deg);
+        -moz-transform: rotate(-202deg);
+        -o-transform: rotate(-202deg);
+        transform: rotate(-202deg); }
+      .grid .collegeDetail .star.light {
+        opacity: 0.5; }
+
+/*# sourceMappingURL=style.css.map */

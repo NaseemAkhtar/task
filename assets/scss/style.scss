@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+@import "fonts"; 
+@import "mixin";
+@import "variables";
+
+*{
+	outline:none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body { font-family: 'DINPro-Regular' !important; }
+
+.container {
+    max-width: 1362px;
+    width: 100%;
+    padding: 0 15px;
+    margin:  0 auto;
+}
+
+header{
+    padding: 20px 0 63px;
+    font-size: 18px;
+    line-height: 28px;
+    color: $gray-dark;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(255px,1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 50px;
+    .item{
+        border: solid 0.2px rgba(68, 68, 68, 0.1);
+        @include border-radius(4px);
+        @include box-shadow(0 0 19px 0 rgba(68, 68, 68, 0.1));
+    }
+    .imgBox {
+        position: relative;
+        img {
+            width: 100%;
+            display: block;
+        }
+        .detail{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7)
+        }
+        .tag {
+            background: $blue-light;
+            min-width: 130px;
+            margin-top: -17px;
+            position: relative;
+            text-align: center;
+            color: #fff;
+            font-size: 15px;
+            line-height: 18px;
+            float: right;
+            padding: 8px;
+            &:before{
+                content: '';
+                position: absolute;
+                text-align: center;
+                left: -22px;
+                top: 0;
+                border-left: 20px solid transparent;
+                border-top: 17px solid $blue-light;
+                border-right: 7px solid $blue-light;
+                border-bottom: 17px solid $blue-light;
+            }
+        }
+        .rating{
+            float: right;
+            clear: both;
+            text-align: center;
+            color: #ffffff;
+            padding: 7px 8px;
+            line-height: 18px;
+            background: $color-orange;
+            margin-top: 10px;
+            font-size: 13.5px;
+            margin-right: 15px;
+            @include border-radius(4px);
+            span{
+                font-size: 18.5px;
+            }
+        }
+        
+        .tag-rating{
+            position: absolute;
+            bottom: 10px;
+            padding: 0 10px;
+            width: 100%;
+            .tags {
+                float: left;
+                span {
+                    background: #fff;
+                    margin-right: 4px;
+                    display: inline-block;
+                    padding: 8px 17px;
+                    font-size: 13.5px;
+                    line-height: 18px;
+                    color: $gray-dark;
+                    @include border-radius(20px);
+                }
+            }
+            .rank{
+                float: right;
+                color: #fff;
+                margin-top: 10px;
+                font-size: 13.5px;
+                line-height: 18px;
+            }
+        }
+    }
+    .collegeDetail{
+        padding: 10px 15px;
+        h2 {
+            font-size: 18px;
+            line-height: 18px;
+            color: $gray-dark;
+            float: left;
+        }
+        .starRating {
+            float: left;
+            margin-left: 15px;
+        }
+         .star {
+             margin-right: 2px;
+            position: relative;
+            display: inline-block;
+            color: #444444;
+            width: 0px;
+            height: 0px;
+            border-right: 9px solid transparent;
+            border-bottom: 9px solid #444444;
+            border-left: 0px solid transparent;
+            @include transform(rotate(169deg))
+            ;
+             &:before {
+                content: '';
+                border-bottom: 6px solid #444444;
+                border-left: 4px solid transparent;
+                border-right: 3px solid transparent;
+                position: absolute;
+                height: 0;
+                width: 0;
+                top: 5px;
+                left: -2px;
+                display: block;
+                @include transform(rotate(-52deg))
+             }
+             &:after {
+                content: '';
+                position: absolute;
+                display: block;
+                color: #444444;
+                top: 4px;
+                left: -4px;
+                width: 0px;
+                height: 0px;
+                border-right: 8px solid transparent;
+                border-bottom: 5px solid #444444;
+                border-left: 6px solid transparent;
+                @include transform(rotate(-202deg))
+            }
+             &.light{
+                 opacity: 0.5
+             }
+        }
+    }
+}
